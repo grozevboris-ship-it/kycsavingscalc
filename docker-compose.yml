@@ -23,7 +23,7 @@ services:
     container_name: kycsavingscalc-app
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app.rule=Host(`localhost`)"
+      - "traefik.http.routers.app.rule=PathPrefix(`/`)"
       - "traefik.http.routers.app.entrypoints=web"
       - "traefik.http.services.app.loadbalancer.server.port=8080"
     networks:
